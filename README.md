@@ -18,7 +18,7 @@ Link to Visulisation: https://public.tableau.com/app/profile/charles.muiruri
 
 This project aims to achieve an understanding of the countries that have been affected by this disease mostly spreading awareness to more humid and hot places that have a higher chance of infection.This project Showcases the number of reported cases and deaths malaria has caused between the 1900's to the 2000's.
 
-I have understood how exactly malaria is contracted/spreaded, promoting ways of prevention for example using insect repellent or having a functional insect mosquito net above the bed. Overall, this project demonstrates how dangerous malaria is in countries especially in the larger areas of Africa and Asia through statistical, analytical data and visulisations./
+I have understood how exactly malaria is contracted/spreaded, promoting ways of prevention for example i.e. insect repellent and using a functional insect mosquito net above set bed. Overall, this project demonstrates how dangerous malaria is in countries especially in the larger areas of Africa and Asia through statistical, analytical data and visulisations./
 
 Created by Charles Muiruri
 
