@@ -14,7 +14,7 @@ Link to Dataset: https://ourworldindata.org/covid-deaths
 
 **Tableau:** Loading the data into visulisation presenting striaght-forward, systematic charts/graphs Explaining relevent information.
 
-This project aims to achieve an understanding of the countries that have been affected by this disease mostly spreading awareness to more humid and hot places that have a higher chance of infection presenting the amount of cases and deaths it has caused.
+This project aims to achieve an understanding of the countries that have been affected by this disease mostly spreading awareness to more humid and hot places that have a higher chance of infection Showcasing the number of reported cases and deaths malaria has caused.
 
 I have learnt from this project, how exactly malaria is contacted/spreaded with ways to prevent this occurance for example, using isect repellent or having functional insect misquito net above the bed.
 
