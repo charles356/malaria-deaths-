@@ -20,7 +20,7 @@ This project aims to achieve an understanding of the countries that have been af
 
 I have learnt from this project, how exactly malaria is contacted/spreaded with ways to prevent this occurance for example, using isect repellent or having functional insect misquito net above the bed.
 
-
+Created by Charles Muiruri
 
 
 
