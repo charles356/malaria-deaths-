@@ -4,9 +4,9 @@ This Repository details the number of worldwide country deaths being caused by m
 
 **Resources**
 
-Link to Dataset: https://ourworldindata.org/covid-deaths
+**Link to Dataset:** https://ourworldindata.org/covid-deaths
 
-Link to Visulisation: https://public.tableau.com/app/profile/charles.muiruri
+**Link to Visulisation:** https://public.tableau.com/app/profile/charles.muiruri
 
 **Tools as Follow**
 
