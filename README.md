@@ -8,7 +8,7 @@ Link to Dataset: https://ourworldindata.org/covid-deaths
 
 Link to Visulisation: https://public.tableau.com/app/profile/charles.muiruri
 
-**Tools as Follow:**
+**Tools as Follow**
 
 **Microsoft Excel:** Extracting the dataset, making the appropriate changes to column names
 
