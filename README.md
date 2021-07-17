@@ -10,7 +10,7 @@ Link to Visulisation: https://public.tableau.com/app/profile/charles.muiruri
 
 **Tools as Follow**
 
-**Microsoft Excel:** Extracting the dataset, making the appropriate changes to column names
+**Microsoft Excel:** Extracting the dataset, making the appropriate changes to column names.
 
 **MYSQL:** For transforming, filtering data into information, used to get accurate analytical data/statistics.
 
