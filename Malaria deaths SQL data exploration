@@ -143,3 +143,4 @@ WITH cte_deaths AS (SELECT entity, year, malaria_deaths_age_5_14,
 WHERE malaria_deaths_age_5_14 !=0 )
 SELECT cd.entity, cd.year, rank_deaths, malaria_deaths_age_5_14 FROM cte_deaths cd;
 
+
