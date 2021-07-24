@@ -1,4 +1,6 @@
- -- 1. countries with most malaria deaths age 5 and under compared to malaria deaths age 70 and up in the 1900's (per 100,000 individuals)
+ 
+ 
+ -- 1. Countries with most malaria deaths age 5 and under compared to malaria deaths age 70 and up in the 1900's (per 100,000 individuals)
 
 SELECT Entity, Year, ROUND(malaria_deaths_age_5,2) AS total_deaths_age_5, ROUND(malaria_deaths_age_70,2) AS  total_deaths_age_70 FROM malaria_deaths
 WHERE  year < 2000 AND malaria_deaths_age_5 <> 0 AND malaria_deaths_age_70 != 0
@@ -8,7 +10,7 @@ ORDER BY year ASC;
 
 
 
--- 2. display average deaths of countries only in africa (per 100,000 individuals)
+-- 2. Displyed average deaths of countries only in Africa (per 100,000 individuals)
 
 SELECT entity, year, malaria_deaths_age_5, malaria_deaths_all_ages_rate, malaria_deaths_age_70,
  malaria_deaths_age_50_69, malaria_deaths_age_15_49, malaria_deaths_age_5_14, malaria_deaths_age_standardized_rate, 
@@ -26,7 +28,7 @@ WHERE entity IN ('Cameroon', 'Cape Verde', 'Centeral Afirca Republic', 'Central 
 
 
 
--- 3. number of cases of malaria deaths per country (per 100,000 individuals)
+-- 3. Number of cases of malaria deaths per country (per 100,000 individuals)
 
 SELECT Entity, COUNT(*) AS total_cases FROM malaria_deaths
 WHERE malaria_deaths_age_5 != 0
@@ -36,7 +38,7 @@ GROUP BY entity;
 
 
 
--- 4. USING WITH cte || countries with most malaria deaths age 5 and under compared to malaria deaths age 70 and up in the 1900's compared to 2000's (per 100,000 individuals)
+-- 4. USING WITH cte || Countries with most malaria deaths age 5 and under compared to malaria deaths age 70 and up in the 1900's compared to 2000's (per 100,000 individuals)
 
 
 WITH cte_malaria_1990 AS (SELECT Entity, Year, malaria_deaths_age_5, ROUND(malaria_deaths_age_5,2) AS total_deaths_age_5,
@@ -62,14 +64,14 @@ malaria_deaths_age_70_1990 DESC, malaria_deaths_age_70_2000 DESC;
 
 
 
--- 5. malaria deaths of all ages v standardized age rate (meaning that we assume a constant population age without factors effecting it e.g. aging
+-- 5. Malaria deaths of all ages v standardized age rate (meaning that we assume a constant population age without factors effecting it e.g. aging
 -- with percentage increase (per 100,000 individuals)
 
 SELECT entity, year, ROUND(malaria_deaths_all_ages_rate,3) AS malaria_deaths_all_ages_rate, ROUND(malaria_deaths_age_standardized_rate,3)
  AS malaria_deaths_age_standardized_rate, ROUND(total_malaria / malaria_deaths_all_ages_rate * 100,2) AS percentage_change_of_deaths
 FROM (
 
--- percentage change from malaria deaths standerdized by all age rate 
+-- 5.5 Percentage change from malaria deaths standerdized by all age rate 
 
 SELECT entity, year, malaria_deaths_all_ages_rate,  malaria_deaths_age_standardized_rate, 
 malaria_deaths_age_standardized_rate - malaria_deaths_all_ages_rate AS total_malaria  FROM malaria_deaths) AS t
@@ -103,7 +105,7 @@ ORDER BY entity, percentage_of_cases DESC;
 
 
 
--- 7. total death of each country compared to the total number of cases each year (per 100,000 individuals)
+-- 7. Total death of each country compared to the total number of cases each year (per 100,000 individuals)
 
 SELECT md.Entity, md.year, ROUND(malaria_deaths_age_5 + malaria_deaths_all_ages_rate + 
 malaria_deaths_age_70 + malaria_deaths_age_50_69 + malaria_deaths_age_15_49 + malaria_deaths_age_5_14 + malaria_deaths_age_standardized_rate,0) AS total_deaths,
@@ -121,7 +123,7 @@ ORDER BY country_cases DESC, country_cases DESC;
 
 
 
--- 8. USING WINDOW FUNCTION||Average deaths and cumulative deathsfor each country standardised (per 100,000 individuals)
+-- 8. USING WINDOW FUNCTION|| Average deaths and cumulative deathsfor each country standardised (per 100,000 individuals)
 
 SELECT entity,  year, malaria_deaths_age_standardized_rate,
 ROUND(AVG(malaria_deaths_age_standardized_rate) OVER(PARTITION BY entity),3) AS 'average deaths',
